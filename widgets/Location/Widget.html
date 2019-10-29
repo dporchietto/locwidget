@@ -1,0 +1,113 @@
+<div>
+	
+	<!--<div>${nls.label2}.[${config.configText}]</div>
+	<div data-dojo-attach-point="mapIdNode"></div> -->
+	<div data-dojo-attach-point="tabLocation">
+	<div class="identify-tab-node" data-dojo-attach-point="tabNode1">
+	<h1>Decimales</h1>
+	<br></br>
+	Latitud:&nbsp;&nbsp;&nbsp;&nbsp;	<input id="LatTextBox" data-dojo-type="dijit/form/TextBox" value="-31.417" placeHolder="-31.417" data-dojo-attach-point="LatTextBox" data-dojo-props="intermediateChanges:true, placeHolder:'-31.417'" style="width: 10em;"></input>
+	<br></br>
+	Longitud:	<input id="LongTextBox" data-dojo-type="dijit/form/TextBox" value="-64.184" placeHolder="-64.184" data-dojo-attach-point="LongTextBox" data-dojo-props="intermediateChanges:true, placeHolder:'-64.184'" style="width: 10em;"></input>
+	<br></br>
+	<button id="latlong" data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="latlong">Ubicar coordenadas</button> 
+	<hr>
+	<h1>Grados - Minutos - Segundos</h1>
+	<br></br>
+	Latitud:
+	<input id="LatDegTextBox" data-dojo-type="dijit/form/TextBox" value="" placeHolder="-31" data-dojo-attach-point="LatDegTextBox" data-dojo-props="intermediateChanges:true" style="width: 5em;"></input>
+	<input id="LatMinTextBox" data-dojo-type="dijit/form/TextBox" value="" placeHolder="25" data-dojo-attach-point="LatMinTextBox" data-dojo-props="intermediateChanges:true" style="width: 5em;"></input>
+	<input id="LatSecTextBox" data-dojo-type="dijit/form/TextBox" value="" placeHolder="1.2" data-dojo-attach-point="LatSecTextBox" data-dojo-props="intermediateChanges:true" style="width: 7em;"></input>
+	<br><br>
+	Longitud:
+	<input id="LongDegTextBox" data-dojo-type="dijit/form/TextBox" value="" placeHolder="-64" data-dojo-attach-point="LongDegTextBox" data-dojo-props="intermediateChanges:true" style="width: 5em;"></input>
+	<input id="LongMinTextBox" data-dojo-type="dijit/form/TextBox" value="" placeHolder="11" data-dojo-attach-point="LongMinTextBox" data-dojo-props="intermediateChanges:true" style="width: 5em;"></input>
+	<input id="LongSecTextBox" data-dojo-type="dijit/form/TextBox" value="" placeHolder="2.39" data-dojo-attach-point="LongSecTextBox" data-dojo-props="intermediateChanges:true" style="width: 7em;"></input>
+	<br></br>
+	<button id="dms" data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="dms">Ubicar coordenadas</button> 
+	<br></br>
+	<button id="clear" data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="clear">Limpiar campos</button> 
+	<br></br>
+	</div>
+	<div class="identify-tab-node" style="display: none" data-dojo-attach-point="tabNode2">
+	<!--USNG / MGRS: <input id="GridTextBox" data-dojo-type="dijit/form/TextBox" value="" data-dojo-attach-point="GridTextBox" placeHolder="17RNM2400031000"  data-dojo-props="intermediateChanges:true, placeHolder:'17RNM2400031000'" style="width: 10em;"></input>
+	<br></br>
+	<button id="grid" data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="grid">Ubicar coordenadas</button> 
+	<br></br>
+	<br></br>-->
+	</div>
+	<div class="identify-tab-node" data-dojo-attach-point="tabNode3">
+	<br></br>
+	X/Este:	<input id="ProjXBox" data-dojo-type="dijit/form/TextBox" value="748279.876" placeHolder="748279.876" data-dojo-attach-point="ProjXBox" data-dojo-props="intermediateChanges:true, placeHolder:'-80.7352016'" style="width: 10em;"></input>
+	<br></br>
+	Y/Norte:	<input id="ProjYBox" data-dojo-type="dijit/form/TextBox" value="1416546.676" placeHolder="1416546.676" data-dojo-attach-point="ProjYBox" data-dojo-props="intermediateChanges:true, placeHolder:'-80.7352016'" style="width: 10em;"></input>
+	<br></br>
+	Código: <input id="wkidDiv" data-dojo-type="dijit/form/TextBox" value="" placeHolder="wkid" data-dojo-attach-point="wkidDiv" data-dojo-props="intermediateChanges:true" style="width: 5em;"></input>
+	<!--<a href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Projected_coordinate_systems/02r3000000vt000000/" target="_blank">wkid List</a>-->
+	<br></br>
+	<button id="proj" data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="proj">Ubicar coordenadas</button> 
+	<br></br>
+	<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{padding:1px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg th{font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+		</style>
+		<table class="tg">
+		  <tr>
+			<th class="tg-0pky">Sistema Proyectivo</th>
+			<th class="tg-0pky">Faja</th>
+			<th class="tg-0pky">Código</th>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">POSGAR 07</td>
+			<td class="tg-0pky">3</td>
+			<td class="tg-0pky">5345</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">POSGAR 94</td>
+			<td class="tg-0pky">3</td>
+			<td class="tg-0pky">22183</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">POSGAR 98</td>
+			<td class="tg-0pky">3</td>
+			<td class="tg-0pky">22173</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">CAMPO INCHAUSPE 69</td>
+			<td class="tg-0pky">3</td>
+			<td class="tg-0pky">22193</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">POSGAR 07</td>
+			<td class="tg-0pky">4</td>
+			<td class="tg-0pky">5346</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">POSGAR 94</td>
+			<td class="tg-0pky">4</td>
+			<td class="tg-0pky">22184</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">POSGAR 98</td>
+			<td class="tg-0pky">4</td>
+			<td class="tg-0pky">22174</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">CAMPO INCHAUSPE 69</td>
+			<td class="tg-0pky">4</td>
+			<td class="tg-0pky">22194</td>
+		  </tr>
+		  <tr>
+			<td class="tg-0pky">UTM</td>
+			<td class="tg-0pky">20S</td>
+			<td class="tg-0pky">32720</td>
+		  </tr>
+		</table>
+	</div>	
+	</div>
+	
+	
+
+</div>
