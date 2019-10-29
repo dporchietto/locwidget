@@ -3,6 +3,6 @@
   "AddressURL": "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
   "GridURL": "http://serverapps101.esri.com/arcgis/rest/services/MGRS/GeocodeServer",
   "GeometryURL": "http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
-  "WKID": "2236",
+  "WKID": "22184",
   "ZoomLvlconfig": "15"
 }

@@ -35,7 +35,7 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
           //content: this.tabNode2
         //});
 		tabs.push({
-          title: "UTM",
+          title: "Planas",
           content: this.tabNode3
         });
         this.selTab = "Lat/Long";
