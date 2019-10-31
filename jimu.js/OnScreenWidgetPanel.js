@@ -57,7 +57,7 @@ define(['dojo/_base/declare',
       postCreate: function() {
         this._originalBox = {
           w: 400,
-          h: 410
+          h: 800
         };
       },
 
