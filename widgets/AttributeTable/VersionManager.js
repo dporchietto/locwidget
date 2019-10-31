@@ -82,6 +82,11 @@ function(BaseVersionManager) {
         return oldConfig;
       }
     }, {
+      version: '2.9',
+      upgrader: function(oldConfig){
+        return oldConfig;
+      }
+    },{
       version: '2.8',
       upgrader: function(oldConfig){
         var newConfig = oldConfig;
