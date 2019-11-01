@@ -43,12 +43,23 @@
 			<br></br>
 			Y/Norte:	<input id="ProjYBox" data-dojo-type="dijit/form/TextBox" value="6524150.9155443795" placeHolder="6524150.9155443795" data-dojo-attach-point="ProjYBox" data-dojo-props="intermediateChanges:true, placeHolder:'-80.7352016'" style="width: 10em;"></input>
 			<br></br>
-			Código: <input id="wkidDiv" data-dojo-type="dijit/form/TextBox" value="22184" placeHolder="wkid" data-dojo-attach-point="wkidDiv" data-dojo-props="intermediateChanges:true" style="width: 5em;"></input>
+			<!--Código: <input id="wkidDiv" data-dojo-type="dijit/form/TextBox" value="22184" placeHolder="wkid" data-dojo-attach-point="wkidDiv" data-dojo-props="intermediateChanges:true" style="width: 5em;"></input>-->
+			Código <select id="wkidDiv" data-dojo-type="dijit/form/Select" data-dojo-attach-point="wkidDiv" data-dojo-props="intermediateChanges:true" style="width: 5em;">
+				<option value="5345">POSGAR 07 - Faja 3</option>
+				<option value="22173">POSGAR 98 - Faja 3</option>
+				<option value="22183">POSGAR 94 - Faja 3</option>
+				<option value="22193">CAMPO INCHAUSPE 69 - Faja 3</option>
+				<option value="5346">POSGAR 07 - Faja 4</option>
+				<option value="22174">POSGAR 98 - Faja 4</option>
+				<option value="22184">POSGAR 94 - Faja 4</option>
+				<option value="22194">CAMPO INCHAUSPE 69 - Faja 4</option>
+				<option value="32720">UTM - 20S</option>
+			  </select>
 			<!--<a href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#/Projected_coordinate_systems/02r3000000vt000000/" target="_blank">wkid List</a>-->
 			<br></br>
 			<button id="proj" data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-point="proj">Ubicar coordenadas</button> 
 			<br></br>
-			<style type="text/css">
+			<!--style type="text/css">
 				.tg  {border-collapse:collapse;border-spacing:0;}
 				.tg td{padding:1px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 				.tg th{font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
@@ -75,7 +86,7 @@
 					<td class="tg-0pky">3</td>
 					<td class="tg-0pky">22183</td>
 				  </tr>
-				  				  <tr>
+				  <tr>
 					<td class="tg-0pky">CAMPO INCHAUSPE 69</td>
 					<td class="tg-0pky">3</td>
 					<td class="tg-0pky">22193</td>
@@ -105,7 +116,7 @@
 					<td class="tg-0pky">20S</td>
 					<td class="tg-0pky">32720</td>
 				  </tr>
-				</table>
+				</table>-->
 				<br></br>
 	</div>	
 	</div>
