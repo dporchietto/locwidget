@@ -57,7 +57,7 @@ define(['dojo/_base/declare',
       postCreate: function() {
         this._originalBox = {
           w: 400,
-          h: 500
+          h: 410
         };
       },
 
@@ -123,7 +123,7 @@ define(['dojo/_base/declare',
       makePositionInfoBox: function() {
         this._positionInfoBox = {
           w: this.position.width || 400,
-          h: this.position.height || 500,
+          h: this.position.height || 410,
           l: this.position.left || 0,
           t: this.position.top || 0
         };
@@ -132,7 +132,7 @@ define(['dojo/_base/declare',
       _makeOriginalBox: function() {
         this._originalBox = {
           w: this.position.width || 400,
-          h: this.position.height || 500,
+          h: this.position.height || 410,
           l: this.position.left || 0,
           t: this.position.top || 0
         };
