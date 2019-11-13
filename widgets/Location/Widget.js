@@ -173,10 +173,10 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 		if (Spat == "geo"){
 			graphic = new Graphic(LocPoint, symbol);
 			map.graphics.add(graphic);
-			//map.infoWindow.resize(200,100);
-			//map.infoWindow.setTitle("Resultado");
-			//map.infoWindow.setContent("No se encontró la dirección");
-			//map.infoWindow.show(LocPoint, map.getInfoWindowAnchor(LocPoint));
+			map.infoWindow.resize(200,100);
+			map.infoWindow.setTitle("Resultado");
+			map.infoWindow.setContent("No se encontró la dirección");
+			map.infoWindow.show(LocPoint, map.getInfoWindowAnchor(LocPoint));
 			map.centerAndZoom(LocPoint,ZoomIt);
 		} else {
 			var ProjSR = new SpatialReference(MyMapwkid);
@@ -187,10 +187,10 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 				zoomPoint = projectedPoints[0];
 				graphic = new Graphic(zoomPoint, symbol);
 				map.graphics.add(graphic);
-				//map.infoWindow.resize(200,100);
-				//map.infoWindow.setTitle("Resultado");
-				//map.infoWindow.setContent("No se encontró la dirección");
-				//map.infoWindow.show(zoomPoint, map.getInfoWindowAnchor(zoomPoint));
+				map.infoWindow.resize(200,100);
+				map.infoWindow.setTitle("Resultado");
+				map.infoWindow.setContent("No se encontró la dirección");
+				map.infoWindow.show(zoomPoint, map.getInfoWindowAnchor(zoomPoint));
 				map.centerAndZoom(zoomPoint,ZoomIt);
 			});
 		}
@@ -204,11 +204,11 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 				LocPoint = webMercatorUtils.geographicToWebMercator(evt.address.location);
 				graphic = new Graphic(LocPoint, symbol, address, infoTemplate);
 				map.graphics.add(graphic);
-				//map.infoWindow.setTitle("Resultado");
-				//map.infoWindow.setContent("<b>Dirección:</b> "  + evt.address.address.Address + "<br></br>" + "<b>Ciudad:</b> " + evt.address.address.City + "<br></br>" + 
+				map.infoWindow.setTitle("Resultado");
+				map.infoWindow.setContent("<b>Dirección:</b> "  + evt.address.address.Address + "<br></br>" + "<b>Ciudad:</b> " + evt.address.address.City + "<br></br>" + 
 				"<b>País:</b> " + evt.address.address.CountryCode );
-				//map.infoWindow.resize(250,100);
-				//map.infoWindow.show(LocPoint, map.getInfoWindowAnchor(LocPoint));
+				map.infoWindow.resize(250,100);
+				map.infoWindow.show(LocPoint, map.getInfoWindowAnchor(LocPoint));
 				map.centerAndZoom(LocPoint,ZoomIt);
 			} else {
 				LocPoint = evt.address.location;
@@ -220,11 +220,11 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 					zoomPoint = projectedPoints[0];
 					graphic = new Graphic(zoomPoint, symbol, address, infoTemplate);
 					map.graphics.add(graphic);
-					//map.infoWindow.setTitle("Resultado");
-					//map.infoWindow.setContent("<b>Dirección:</b> "  + evt.address.address.Address + "<br></br>" + "<b>Ciudad:</b> " + evt.address.address.City + "<br></br>" + 
+					map.infoWindow.setTitle("Resultado");
+					map.infoWindow.setContent("<b>Dirección:</b> "  + evt.address.address.Address + "<br></br>" + "<b>Ciudad:</b> " + evt.address.address.City + "<br></br>" + 
 					"<b>País:</b> " + evt.address.address.CountryCode );
-					//map.infoWindow.resize(250,100);
-					//map.infoWindow.show(zoomPoint, map.getInfoWindowAnchor(LocPoint));
+					map.infoWindow.resize(250,100);
+					map.infoWindow.show(zoomPoint, map.getInfoWindowAnchor(LocPoint));
 					map.centerAndZoom(zoomPoint,ZoomIt);
 				})
 			}
