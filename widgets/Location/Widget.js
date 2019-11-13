@@ -174,8 +174,8 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 			graphic = new Graphic(LocPoint, symbol);
 			map.graphics.add(graphic);
 			map.infoWindow.resize(200,100);
-			map.infoWindow.setTitle("Result");
-			map.infoWindow.setContent("No Address has been found");
+			map.infoWindow.setTitle("Resultado");
+			map.infoWindow.setContent("No se encontró la dirección");
 			map.infoWindow.show(LocPoint, map.getInfoWindowAnchor(LocPoint));
 			map.centerAndZoom(LocPoint,ZoomIt);
 		} else {
@@ -188,8 +188,8 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 				graphic = new Graphic(zoomPoint, symbol);
 				map.graphics.add(graphic);
 				map.infoWindow.resize(200,100);
-				map.infoWindow.setTitle("Result");
-				map.infoWindow.setContent("No Address has been found");
+				map.infoWindow.setTitle("Resultado");
+				map.infoWindow.setContent("No se encontró la dirección");
 				map.infoWindow.show(zoomPoint, map.getInfoWindowAnchor(zoomPoint));
 				map.centerAndZoom(zoomPoint,ZoomIt);
 			});
@@ -204,9 +204,9 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 				LocPoint = webMercatorUtils.geographicToWebMercator(evt.address.location);
 				graphic = new Graphic(LocPoint, symbol, address, infoTemplate);
 				map.graphics.add(graphic);
-				map.infoWindow.setTitle("Result");
-				map.infoWindow.setContent("<b>Address:</b> "  + evt.address.address.Address + "<br></br>" + "<b>City:</b> " + evt.address.address.City + "<br></br>" + 
-				"<b>Country:</b> " + evt.address.address.CountryCode );
+				map.infoWindow.setTitle("Resultado");
+				map.infoWindow.setContent("<b>Dirección:</b> "  + evt.address.address.Address + "<br></br>" + "<b>Ciudad:</b> " + evt.address.address.City + "<br></br>" + 
+				"<b>País:</b> " + evt.address.address.CountryCode );
 				map.infoWindow.resize(250,100);
 				map.infoWindow.show(LocPoint, map.getInfoWindowAnchor(LocPoint));
 				map.centerAndZoom(LocPoint,ZoomIt);
@@ -220,9 +220,9 @@ function(declare, BaseWidget, dom, on, lang, SimpleMarkerSymbol, SimpleLineSymbo
 					zoomPoint = projectedPoints[0];
 					graphic = new Graphic(zoomPoint, symbol, address, infoTemplate);
 					map.graphics.add(graphic);
-					map.infoWindow.setTitle("Result");
-					map.infoWindow.setContent("<b>Address:</b> "  + evt.address.address.Address + "<br></br>" + "<b>City:</b> " + evt.address.address.City + "<br></br>" + 
-					"<b>Country:</b> " + evt.address.address.CountryCode );
+					map.infoWindow.setTitle("Resultado");
+					map.infoWindow.setContent("<b>Dirección:</b> "  + evt.address.address.Address + "<br></br>" + "<b>Ciudad:</b> " + evt.address.address.City + "<br></br>" + 
+					"<b>País:</b> " + evt.address.address.CountryCode );
 					map.infoWindow.resize(250,100);
 					map.infoWindow.show(zoomPoint, map.getInfoWindowAnchor(LocPoint));
 					map.centerAndZoom(zoomPoint,ZoomIt);
